@@ -1,0 +1,49 @@
+<template>
+  <div class="page-container d-flex flex-column min-vh-100">
+    <HeaderComponent />
+    <div class="content-wrap container flex-grow-1 mt-4">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4" v-for="item in dashboardItems" :key="item.id">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <div class="icon mb-3">
+                <i :class="item.iconClass"></i>
+              </div>
+              <h5 class="card-title">{{ item.title }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+            </div>
+            <div class="card-footer">
+              <router-link :to="item.link" class="btn btn-primary">Ga naar {{ item.title }}</router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <FooterComponent />
+  </div>
+</template>
+
+<script>
+import HeaderComponent from '../components/HeaderComponent.vue';
+import FooterComponent from '../components/FooterComponent.vue';
+
+export default {
+  name: 'DashboardView',
+  components: {
+    HeaderComponent,
+    FooterComponent
+  },
+  data() {
+    return {
+      dashboardItems: [
+        { id: 1, title: 'Dashboard', description: 'Ga naar het dashboard', link: '/dashboard', iconClass: 'fas fa-tachometer-alt' },
+        { id: 2, title: 'Assigned Reports', description: 'Bekijk toegewezen rapportages', link: '/assigned-reports', iconClass: 'fas fa-tasks' },
+        { id: 3, title: 'Completed Inspections', description: 'Bekijk voltooide inspecties', link: '/completed-inspections', iconClass: 'fas fa-check-circle' },
+        { id: 4, title: 'Knowledge Base', description: 'Toegang tot de kennisbank', link: '/knowledge-base', iconClass: 'fas fa-book' },
+        { id: 5, title: 'Settings', description: 'Wijzig instellingen', link: '/settings', iconClass: 'fas fa-cogs' },
+        { id: 6, title: 'Logout', description: 'Uitloggen', link: '/login', iconClass: 'fas fa-sign-out-alt' }
+      ]
+    };
+  }
+};
+</script>

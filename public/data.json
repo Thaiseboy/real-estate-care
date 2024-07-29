@@ -1,0 +1,57 @@
+{
+  "reports": [
+    {
+      "id": "99cb",
+      "title": "Nieuw",
+      "damage": true,
+      "maintenance": true,
+      "technical": true,
+      "modification": true,
+      "damageDetails": {
+        "location": "net",
+        "newDamage": "yes",
+        "damageType": "moedwillig",
+        "date": "2024-07-28",
+        "urgentAction": "yes",
+        "description": "nvt"
+      },
+      "maintenanceDetails": {
+        "location": "jjijijjij",
+        "maintenanceType": "schilderwerk",
+        "urgentAction": "yes",
+        "costEstimate": "500-1500"
+      },
+      "technicalDetails": {
+        "location": "HHHHHHH",
+        "installationType": "luchtverversing",
+        "reportedIssues": "NVT",
+        "testProcedure": "yes",
+        "remarks": "NVT"
+      },
+      "modificationDetails": {
+        "location": "NVT",
+        "executedBy": "onbekend",
+        "modificationDescription": "NVTVTV",
+        "actionToTake": "laten verwijderen",
+        "remarks": "nvtvt",
+        "files": {
+          "0": {}
+        }
+      }
+    },
+    {
+      "id": "3af7",
+      "title": "Tweede test rapport voor de datum",
+      "damage": true,
+      "maintenance": false,
+      "technical": false,
+      "modification": false,
+      "damageDetails": {
+        "date": "2024-07-31"
+      },
+      "maintenanceDetails": {},
+      "technicalDetails": {},
+      "modificationDetails": {}
+    }
+  ]
+}
