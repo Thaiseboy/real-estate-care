@@ -107,7 +107,7 @@ export default {
 
 h1 {
   font-size: 24px;
-  color: var(--secondary-color);
+  color: white;
 }
 
 .list-group-item {
@@ -121,7 +121,5 @@ h1 {
   background-color: var(--primary-color);
   color: white;
 }
-.head-text {
-  color: var(--secondary-color);
-}
+
 </style>

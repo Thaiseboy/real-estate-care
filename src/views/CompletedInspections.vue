@@ -38,6 +38,8 @@ import MaintenanceAssessmentForm from '@/components/form/MaintenanceAssessment.v
 import TechnicalInspectionForm from '@/components/form/TechnicalInspection.vue';
 import ModificationInventoryForm from '@/components/form/ModificationInventory.vue';
 import { apiService } from '@/services/apiService';
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
 
 export default {
   components: {
@@ -51,11 +53,15 @@ export default {
   data() {
     return {
       reports: [],
-      selectedReport: null
+      selectedReport: null,
+      notificationsEnabled: true,
+      soundsEnabled: true
     };
   },
   async created() {
     await this.fetchReports();
+    this.notificationsEnabled = JSON.parse(localStorage.getItem('notificationsEnabled')) !== false;
+    this.soundsEnabled = JSON.parse(localStorage.getItem('soundsEnabled')) !== false;
   },
   methods: {
     async fetchReports() {
@@ -73,6 +79,12 @@ export default {
         await apiService.saveReport(this.selectedReport);
         await this.fetchReports();
         this.selectedReport = null;
+        if (this.notificationsEnabled) {
+          toastr.success('Het rapport is succesvol bijgewerkt.');
+        }
+        if (this.soundsEnabled) {
+          this.playSound('success');
+        }
       } catch (error) {
         console.error('Error updating report:', error);
       }
@@ -81,9 +93,36 @@ export default {
       try {
         await apiService.deleteReport(reportId);
         await this.fetchReports();
+        if (this.notificationsEnabled) {
+          toastr.success('Het rapport is succesvol verwijderd.');
+        }
+        if (this.soundsEnabled) {
+          this.playSound('success');
+        }
       } catch (error) {
         console.error('Error deleting report:', error);
       }
+    },
+    playSound(type) {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+
+      if (type === 'success') {
+        oscillator.frequency.value = 440; // A4
+      } else if (type === 'info') {
+        oscillator.frequency.value = 660; // E5
+      }
+
+      oscillator.type = 'sine';
+      oscillator.start();
+      gainNode.gain.setValueAtTime(1, audioContext.currentTime);
+      gainNode.gain.exponentialRampToValueAtTime(0.0001, audioContext.currentTime + 1);
+
+      oscillator.stop(audioContext.currentTime + 1);
     }
   }
 };
@@ -92,5 +131,21 @@ export default {
 <style scoped>
 .head-text {
   color: white;
+}
+.report-item {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e0e0;
+}
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.report-buttons {
+  display: flex;
+  gap: 0.5rem;
 }
 </style>
