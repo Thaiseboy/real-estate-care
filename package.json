@@ -17,6 +17,7 @@
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
+    "toastr": "^2.1.4",
     "vue": "^3.4.31",
     "vue-router": "^4.4.0",
     "vue-toastification": "^2.0.0-rc.5",
