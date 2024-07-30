@@ -30,8 +30,9 @@ export default {
     handleLogin() {
       // Simuleer de inloglogica met local storage
       if (this.username === 'admin' && this.password === 'admin') {
-        localStorage.setItem('user', JSON.stringify({ username: this.username }));
-        this.$router.push('/dashboard');
+        localStorage.setItem('auth', JSON.stringify({ username: this.username }));
+        const redirectPath = this.$route.query.redirect || '/dashboard';
+        this.$router.push(redirectPath);
       } else {
         alert('Ongeldige gebruikersnaam of wachtwoord');
       }

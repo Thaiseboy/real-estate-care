@@ -9,7 +9,7 @@ import LoginForm from "../views/LoginForm.vue"; // Aangepast pad
 const routes = [
   {
     path: "/",
-    redirect: "/dashboard",
+    redirect: "/login",
   },
   {
     path: "/login",
@@ -47,7 +47,6 @@ const routes = [
     meta: { requiresAuth: true },
   },
 ];
-
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
