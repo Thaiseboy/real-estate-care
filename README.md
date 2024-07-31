@@ -1,65 +1,99 @@
-# Debriefing – Inhoudelijk Onderbouwd
+# Real Estate Care
 
-## Inleiding
+## Overzicht
+Real Estate Care is een webgebaseerde Single Page Application (SPA) ontworpen voor inspecteurs om rapportages van inspecties te beheren. De applicatie ondersteunt zowel iOS als Android apparaten en biedt een touch interface die aansluit op de workflow van de inspecteur. Gebruikers kunnen rapportages aanmaken, foto's toevoegen, en rapportages offline opslaan totdat er weer netwerk beschikbaar is.
 
-De keuze voor het ontwikkelingsframework voor de RealEstateCare webapplicatie is zorgvuldig afgewogen, waarbij diverse aspecten zoals ecosysteem, schaalbaarheid, onderhoudbaarheid, performance, en veiligheid zijn overwogen. In deze debriefing worden de persoonlijke voorkeuren en concrete voordelen van het gekozen framework, Vue.js en Vue Native, nader toegelicht.
+## Functionaliteiten
+- **Login**: Gebruikers kunnen inloggen met een gebruikersnaam en wachtwoord.
+- **Dashboard**: Overzicht van de applicatie.
+- **Assigned Reports**: Aanmaken en opslaan van nieuwe rapportages.
+- **Completed Inspections**: Bekijken, bijwerken en verwijderen van afgeronde rapportages.
+- **Settings**: Aanpassen van gebruikersinstellingen, zoals gebruikersnaam, wachtwoord en thema.
+- **Knowledge Base**: Bekijken van documentatie en gedetailleerde rapportages.
 
-## Ecosysteem van het Framework (Vue.js)
+## Installatie
+Volg deze stappen om de applicatie lokaal te installeren en te starten:
 
-### Persoonlijke Voorkeur:
+1. **Clone de repository**:
+   ```bash
+   git clone <https://github.com/Thaiseboy/real-estate-care.git>
+   cd real-estate-care
+2. **Installeer de dependencies**
+	```bash
+	npm install
+3. Start de ontwikkelserver:
+	```bash
+	npm run serve
+4. Start de JSON-server:
+	```bash
+	npm run json-server
+	
+## Deployment
+De applicatie kan eenvoudig worden gedeployeerd naar Netlify. volg deze stappen.
 
-De voorkeur gaat uit naar Vue.js vanwege zijn modulaire structuur en uitgebreide ecosysteem.
+	1. npm run build
+	2. Deploy de dist directory naar Netlify
+	
+## Procesbeschrijving
+Tijdens de ontwikkeling van deze applicatie hebben we de volgende stappen doorlopen:
 
-### Concrete Voordelen:
+1. **Planning**: Identificeren van de vereiste functionaliteiten en het ontwerpen van de UI/UX.
+2. **Implementatie**: Ontwikkelen van de verschillende componenten en functionaliteiten.
+3. **Testing**: Testen van de applicatie om ervoor te zorgen dat alle functionaliteiten correct werken.
+4. **Deployment**: Deployen van de applicatie naar Netlify.
 
--   **Snelheid van Ontwikkeling:** Het rijke ecosysteem versnelt de ontwikkeling door kant-en-klare oplossingen en modules.
--   **Community Support:** Een actieve community zorgt voor regelmatige updates, bugfixes en uitgebreide documentatie.
--   **Flexibiliteit in Integratie:** Vue.js integreert eenvoudig met andere tools, waardoor het geschikt is voor diverse projectvereisten.
+**Wat werkt nog niet perfect?**
+•  De avatar veranderen in de instelling dus die heb ik weg gelaten.
+•  Offline opslag werkt nog niet volledig naar verwachting, met name als de netwerkverbinding wegvalt tijdens het opslaan van een rapportage.
 
-## Schaalbaarheid van de Applicatie (Vue.js en Vue Native)
+## Verantwoording
+**Security**
+Ik heb basisbeveiligingsmaatregelen toegepast, zoals het gebruik van HTTPS voor communicatie en het opslaan van gebruikersinformatie in Local Storage. Verdere beveiligingsmaatregelen zoals two-factor authenticatie en server-side validatie moeten nog worden geïmplementeerd.
 
-### Persoonlijke Voorkeur:
+**Usability**
+We hebben de 10 heuristieken van Jacob Nielsen toegepast om de bruikbaarheid van de applicatie te waarborgen:
 
-De keuze voor Vue.js in combinatie met Vue Native is gebaseerd op schaalbaarheid zonder concessies te doen aan prestaties.
+1. **Zichtbaarheid van de systeemstatus**: De applicatie geeft feedback aan de gebruiker bij het opslaan van rapporten.
 
-### Concrete Voordelen:
+2. **Overeenkomst tussen systeem en de echte wereld**: Gebruik van termen en concepten die bekend zijn bij inspecteurs.
 
--   **Modulaire Structuur:** Componentgebaseerde structuur maakt eenvoudige toevoeging van nieuwe functionaliteiten mogelijk.
--   **Cross-Platform Mobiliteit:** Vue Native maakt snelle uitbreiding naar verschillende mobiele platforms mogelijk.
+3. **Gebruikerscontrole en vrijheid**: Gebruikers kunnen gemakkelijk rapportages bewerken en verwijderen.
 
-## Onderhoudbaarheid van de Applicatie (Vue.js)
+4. **Consistentie en standaarden**: Gebruik van consistente UI-elementen en interacties.
 
-### Persoonlijke Voorkeur:
+5. **Error preventie**: Validatie van invoer om fouten te voorkomen.
 
-Vue.js wordt geprefereerd vanwege de componentgebaseerde architectuur die onderhoudbaarheid bevordert.
+6. **Herkenning boven herinnering**: Gebruik van intuïtieve iconen en labels.
 
-### Concrete Voordelen:
+7. **Flexibiliteit en efficiëntie van gebruik**: Ondersteuning voor zowel desktop- als mobiele gebruikers.
 
--   **Componenthergebruik:** Eenvoudig hergebruik van componenten bevordert consistentie en vereenvoudigt onderhoudstaken.
--   **Minder Codecomplexiteit:** De gestructureerde aard van Vue.js houdt de codebase overzichtelijk, wat onderhoud vergemakkelijkt.
+8. **Esthetisch en minimalistisch ontwerp**: Een eenvoudig en schoon ontwerp dat gebruikers niet overweldigt.
 
-## Performance van de Applicatie (Vue.js)
+9. **Help gebruikers fouten herkennen, diagnosticeren en herstellen**: Informatieve foutmeldingen bij het mislukken van acties.
 
-### Persoonlijke Voorkeur:
+10. **Help en documentatie**: Basisdocumentatie in de applicatie.
 
-De voorkeur voor Vue.js komt voort uit de snelle rendering-engine en de mogelijkheid om asynchrone updates uit te voeren.
+## Accessibility
+**We hebben geprobeerd te voldoen aan de WCAG 2.1-richtlijnen door:**
+•  Gebruik van semantische HTML-elementen.
+•  Toegankelijkheidsattributen zoals aria-labels.
+•  Voldoende kleurcontrast.
 
-### Concrete Voordelen:
+**Wat nog ontbreekt:**
+•  Uitgebreide toetsenbordnavigatie.
+•  Gedetailleerde toetsenbordfocus-indicatoren.
+•  Volledige ondersteuning voor screen readers.
 
--   **Responsiviteit:** Snelle rendering-engine zorgt voor een vlotte gebruikerservaring door snel te reageren op interacties.
--   **Asynchrone Updates:** Mogelijkheid tot asynchrone updates minimaliseert vertragingen, optimaliseert prestaties.
+##	Style Guides / Best Practices
+**We hebben best practices gevolgd voor het Vue.js framework, zoals:**
+•  Component-gebaseerde architectuur.
+•  State management met Vuex.
+•  Routing met Vue Router.
+•  Gebruik van scoped CSS voor componenten.
 
-## Veiligheid van de Applicatie (Vue.js)
+**Er is echter nog ruimte voor verbetering, zoals:**
+•  Meer unit tests voor kritieke componenten.
+•  Uitbreiding van de documentatie voor ontwikkelaars.
 
-### Persoonlijke Voorkeur:
-
-Hoewel Vue.js ingebouwde beveiligingsfuncties biedt, wordt de nadruk gelegd op aanvullende maatregelen zoals inputvalidatie en veilige backend-implementatie.
-
-### Concrete Voordelen:
-
--   **Ingebouwde Beveiligingsfuncties:** Vue.js biedt basisbeveiliging met functies zoals template sandboxing en geïntegreerde XSS-bescherming.
--   **Aanvullende Maatregelen:** Implementeren van extra beveiligingslagen, zoals correct valideren van input en zorgvuldig beheren van gebruikersgegevens, is essentieel voor waterdichte beveiliging.
-
-## Conclusie
-
-In samenvatting rechtvaardigt de keuze voor Vue.js en Vue Native zich door de concrete voordelen op het gebied van ecosysteem, schaalbaarheid, onderhoudbaarheid, performance en veiligheid. Deze frameworks zullen de RealEstateCare webapplicatie niet alleen aan de huidige behoeften laten voldoen maar ook klaarmaken voor toekomstige uitbreidingen en veranderingen.
+##	Conclusie
+Real Estate Care is een robuuste en gebruiksvriendelijke applicatie voor inspecteurs. Hoewel er nog enkele verbeteringen nodig zijn op het gebied van beveiliging, toegankelijkheid en enkele functionaliteiten, biedt de applicatie al een solide basis voor verdere ontwikkeling en gebruik.

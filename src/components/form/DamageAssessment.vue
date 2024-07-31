@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Schade opnemen:</h1>
+    <h1><strong>Schade opnemen</strong></h1>
     <div class="mb-3">
       <label for="location" class="form-label">Locatie</label>
       <input v-model="formData.location" type="text" id="location" class="form-control" required>
@@ -48,6 +48,7 @@
       <textarea v-model="formData.description" id="description" class="form-control" rows="3" required></textarea>
     </div>
   </div>
+  <hr>
 </template>
 
 <script>

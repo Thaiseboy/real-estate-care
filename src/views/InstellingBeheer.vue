@@ -172,7 +172,7 @@ h1 {
 
 .content-wrap {
   flex: 1;
-  padding-bottom: 50px; /* Hoogte van de footer */
+  padding-bottom: 50px; 
 }
 
 .card {
