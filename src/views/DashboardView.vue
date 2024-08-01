@@ -37,12 +37,12 @@ export default {
   data() {
     return {
       dashboardItems: [
-        { id: 1, title: 'Dashboard', description: 'Ga naar het dashboard', link: '/dashboard', iconClass: 'fas fa-tachometer-alt' },
-        { id: 2, title: 'Assigned Reports', description: 'Bekijk toegewezen rapportages', link: '/assigned-reports', iconClass: 'fas fa-tasks' },
-        { id: 3, title: 'Completed Inspections', description: 'Bekijk voltooide inspecties', link: '/completed-inspections', iconClass: 'fas fa-check-circle' },
-        { id: 4, title: 'Knowledge Base', description: 'Toegang tot de kennisbank', link: '/knowledge-base', iconClass: 'fas fa-book' },
-        { id: 5, title: 'Settings', description: 'Wijzig instellingen', link: '/settings', iconClass: 'fas fa-cogs' },
-        { id: 6, title: 'Logout', description: 'Uitloggen', link: '/login', iconClass: 'fas fa-sign-out-alt' }
+        { id: 1, title: 'Dashboard', description: 'Ga naar het dashboard', link: '/dashboard', iconClass: 'bi bi-speedometer2' },
+        { id: 2, title: 'Assigned Reports', description: 'Bekijk toegewezen rapportages', link: '/assigned-reports', iconClass: 'bi bi-card-checklist' },
+        { id: 3, title: 'Completed Inspections', description: 'Bekijk voltooide inspecties', link: '/completed-inspections', iconClass: 'bi bi-check-circle' },
+        { id: 4, title: 'Knowledge Base', description: 'Toegang tot de kennisbank', link: '/knowledge-base', iconClass: 'bi bi-book' },
+        { id: 5, title: 'Settings', description: 'Wijzig instellingen', link: '/settings', iconClass: 'bi bi-gear' },
+        { id: 6, title: 'Logout', description: 'Uitloggen', link: '/login', iconClass: 'bi bi-box-arrow-right' }
       ]
     };
   }
