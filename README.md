@@ -62,6 +62,7 @@ Tijdens de ontwikkeling van deze applicatie hebben we de volgende stappen doorlo
 **Wat werkt nog niet perfect?**
 • De avatar veranderen in de instelling dus die heb ik weg gelaten.
 • Offline opslag werkt nog niet volledig naar verwachting, met name als de netwerkverbinding wegvalt tijdens het opslaan van een rapportage.
+• De backend services voor het opslaan van data op Netlify en Google Firebase zijn nog niet volledig operationeel.
 
 ## Verantwoording
 
