@@ -63,7 +63,11 @@ Tijdens de ontwikkeling van deze applicatie hebben we de volgende stappen doorlo
 1. De avatar veranderen in de instelling dus die heb ik weg gelaten.
 2. Offline opslag werkt nog niet volledig naar verwachting, met name als de netwerkverbinding wegvalt tijdens het opslaan van een rapportage.
 3. De backend services voor het opslaan van data op Netlify en Google Firebase zijn nog niet volledig operationeel.
+<<<<<<< HEAD
 4. Door dat backend service niet werk op hosting heb ik gebruik gemaakt van mock data.
+=======
+
+>>>>>>> 047d3f173f664eb0ecdbce4da77a87c80d46a1ad
 ## Verantwoording
 
 **Security**
