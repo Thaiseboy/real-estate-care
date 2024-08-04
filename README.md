@@ -57,13 +57,13 @@ Tijdens de ontwikkeling van deze applicatie hebben we de volgende stappen doorlo
 1.  **Planning**: Identificeren van de vereiste functionaliteiten en het ontwerpen van de UI/UX.
 2.  **Implementatie**: Ontwikkelen van de verschillende componenten en functionaliteiten.
 3.  **Testing**: Testen van de applicatie om ervoor te zorgen dat alle functionaliteiten correct werken.
-4.  **Deployment**: Deployen van de applicatie naar Netlify.
+4.  **Deployment**: Deployen van de applicatie naar Netlify en google firebase.
 
 **Wat werkt nog niet perfect?**
-• De avatar veranderen in de instelling dus die heb ik weg gelaten.
-• Offline opslag werkt nog niet volledig naar verwachting, met name als de netwerkverbinding wegvalt tijdens het opslaan van een rapportage.
-• De backend services voor het opslaan van data op Netlify en Google Firebase zijn nog niet volledig operationeel.
-
+1. De avatar veranderen in de instelling dus die heb ik weg gelaten.
+2. Offline opslag werkt nog niet volledig naar verwachting, met name als de netwerkverbinding wegvalt tijdens het opslaan van een rapportage.
+3. De backend services voor het opslaan van data op Netlify en Google Firebase zijn nog niet volledig operationeel.
+4. Door dat backend service niet werk op hosting heb ik gebruik gemaakt van mock data.
 ## Verantwoording
 
 **Security**
