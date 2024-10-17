@@ -2,7 +2,7 @@
 
 ## Overzicht
 
-Real Estate Care is een webgebaseerde Single Page Application (SPA) ontworpen voor inspecteurs om rapportages van inspecties te beheren. De applicatie ondersteunt zowel iOS als Android apparaten en biedt een touch interface die aansluit op de workflow van de inspecteur. Gebruikers kunnen rapportages aanmaken, foto's toevoegen, en rapportages offline opslaan totdat er weer netwerk beschikbaar is.
+Real Estate Care is een application ontworpen voor inspecteurs om rapportages van inspecties te beheren. De applicatie ondersteunt zowel iOS als Android apparaten en biedt een touch interface die aansluit op de workflow van de inspecteur. Gebruikers kunnen rapportages aanmaken, foto's toevoegen, en rapportages offline opslaan totdat er weer netwerk beschikbaar is.
 
   
 
